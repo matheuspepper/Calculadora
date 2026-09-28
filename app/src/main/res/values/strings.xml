@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Aposentadoria</string>
+    <string name="titulo">Cálculo de Aposentadoria</string>
+    <string name="idade">Idade</string>
+    <string name="requerido">Requerido</string>
+    <string name="genero">Gênero</string>
+    <string name="calcular">CALCULAR</string>
+    <string name="nome_aluno">Nome: SEU NOME</string>
+    <string name="ja_aposentado">Você já deveria estar aposentado.</string>
+    <string name="tempo_restante">Faltam %1$d anos para a aposentadoria.</string>
+</resources>
