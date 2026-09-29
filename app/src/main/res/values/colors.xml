@@ -2,7 +2,7 @@
 <resources>
     <color name="white">#FFFFFF</color>
     <color name="red">#D32F2F</color>
-    <color name="button">#6A1B9A</color>
-    <color name="degrade_inicio">#4527A0</color>
-    <color name="degrade_fim">#00838F</color>
+    <color name="button">#2f3560</color>
+    <color name="degrade_inicio">#ffffc7</color>
+    <color name="degrade_fim">#00b7ff</color>
 </resources>

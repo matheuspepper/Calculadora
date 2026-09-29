@@ -2,41 +2,33 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
     android:background="@drawable/degrade">
 
-    <TextView
-        android:id="@+id/textViewTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/titulo"
-        android:textColor="@color/white"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutIdade"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/textInputLayoutIdade" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:hint="@string/idade"
-        app:startIconDrawable="@drawable/ic_idade"
-        app:helperText="@string/requerido"
+        app:boxStrokeColor="@color/button"
         app:counterEnabled="true"
         app:counterMaxLength="3"
         app:endIconMode="clear_text"
+        app:helperText="@string/requerido"
         app:helperTextTextColor="@color/red"
-        app:layout_constraintTop_toBottomOf="@id/textViewTitulo"
+        app:hintTextColor="@color/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/spinnerGenero"
+        app:startIconDrawable="@drawable/ic_calendar">
 
-        <!-- helperText: mostra uma mensagem auxiliar abaixo do campo. -->
+        <!-- helperText: mostra uma mensagem auxiliar embaixo do campo. -->
         <!-- counterEnabled: ativa o contador de caracteres. -->
         <!-- counterMaxLength: define a quantidade máxima de caracteres. -->
         <!-- endIconMode: coloca um ícone no final para limpar o texto. -->
@@ -47,67 +39,64 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:maxLength="3"/>
+            android:maxLength="3" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/textViewGenero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/genero"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/textInputLayoutIdade"
-        app:layout_constraintStart_toStartOf="parent"/>
 
     <Spinner
         android:id="@+id/spinnerGenero"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:padding="8dp"
-        app:layout_constraintTop_toBottomOf="@id/textViewGenero"
+        android:entries="@array/opcoes_genero"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonCalcular"
+        android:fontFamily="@font/hello_baby"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="@color/button"
+        android:padding="12dp"
         android:text="@string/calcular"
         android:textColor="@color/white"
         android:textSize="16sp"
-        android:backgroundTint="@color/button"
-        android:padding="12dp"
-        app:layout_constraintTop_toBottomOf="@id/spinnerGenero"
+        app:icon="@drawable/ic_setas"
+        app:iconGravity="start"
+        app:iconPadding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutIdade" />
 
     <TextView
         android:id="@+id/textViewResultado"
+        android:fontFamily="@font/hello_baby"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="44dp"
+        android:gravity="center"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/buttonCalcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/buttonCalcular" />
 
     <TextView
         android:id="@+id/textViewNome"
+        android:fontFamily="@font/hello_baby"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/nome_aluno"
-        android:textColor="@color/white"
+        android:layout_marginTop="60dp"
+        android:text="@string/nome"
+        android:textColor="@color/red"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultado" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
